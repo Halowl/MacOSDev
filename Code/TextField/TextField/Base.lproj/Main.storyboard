@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -658,43 +658,44 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="m3l-ve-XaD" kind="relationship" relationship="window.shadowedContentViewController" id="XXr-dM-iZW"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Split View Controller-->
+        <scene sceneID="ij9-5X-ifD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <splitViewController id="m3l-ve-XaD" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="Xim-y1-dQ8"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="Qz7-2I-U2A">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xH5-9f-sBV">
-                                <rect key="frame" x="140" y="35" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="TNy-Jk-TBF"/>
-                                    <constraint firstAttribute="height" constant="200" id="rtB-Zl-Mxo"/>
-                                </constraints>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" state="on" borderStyle="bezel" baseWritingDirection="leftToRight" alignment="left" title="你好" placeholderString="hello" drawsBackground="YES" id="wIb-YJ-e9D">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="xH5-9f-sBV" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="R7f-oL-NZp"/>
-                            <constraint firstItem="xH5-9f-sBV" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="SHu-Ec-zzj"/>
-                        </constraints>
+                    </splitView>
+                    <connections>
+                        <segue destination="brC-fY-5MP" kind="relationship" relationship="splitItems" id="mnP-6J-Bi7"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="gVX-nk-Lty" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="605"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BTr-G9-VeG">
+            <objects>
+                <viewController id="brC-fY-5MP" sceneMemberID="viewController">
+                    <view key="view" id="RCo-po-rzz">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="B2e-Qs-Vyk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="630" y="605"/>
         </scene>
     </scenes>
 </document>
